@@ -13,10 +13,6 @@ export default function TodoList({ todos, onDelete }) {
           onDelete={() => onDelete(index)}
         />
       ))}
-      <Todo text="Coffee" />
-      <Todo text="Milk" />
-      <Todo text="Sugar" />
-      <Todo text="Apples" />
     </List>
   )
 }

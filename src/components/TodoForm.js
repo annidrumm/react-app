@@ -5,9 +5,9 @@ import styled from 'styled-components/macro'
 export default function TodoForm({ onCreateTodo }) {
   return (
     <Form onSubmit={handleSubmit}>
-      <label htmlFor="todo-input">Add Your Dos</label>
+      <label htmlFor="todo-input">Add Your To Dos</label>
       <div>
-        <input id="todo-input" name="todo" />
+        <Input id="todo-input" name="todo" />
         <Button>Add</Button>
       </div>
     </Form>
@@ -22,11 +22,24 @@ export default function TodoForm({ onCreateTodo }) {
   }
 }
 
+const Input = styled.input`
+  font-family: sans-serif;
+  font-size: 1em;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+`
+
 const Form = styled.form`
   display: grid;
+  justify-items: center;
+  gap: 20px;
 `
 
 const Button = styled.button`
+  display: grid;
+  justify-items: center;
+  gap: 20px;
   background-color: skyblue;
   box-shadow: 2px 10px 16px rgba(135, 206, 235);
   border-radius: 50px;
