@@ -1,6 +1,7 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
 
 export default function TodoForm({ onCreateTodo }) {
   return (
@@ -37,9 +38,6 @@ const Form = styled.form`
 `
 
 const Button = styled.button`
-  display: grid;
-  justify-items: center;
-  gap: 20px;
   background-color: skyblue;
   box-shadow: 2px 10px 16px rgba(135, 206, 235);
   border-radius: 50px;
@@ -51,3 +49,8 @@ const Button = styled.button`
   padding: 15px 30px;
   margin: 15px 30px;
 `
+
+TodoForm.defaultProps = {
+  text: 'Coffee',
+  id: uuidv4(),
+}

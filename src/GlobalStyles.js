@@ -7,7 +7,6 @@ export default createGlobalStyle`
     }
 
  body {
-  font-family: sans-serif;
   font-size: 112.5%;
   max-width: 500px;
   display: grid;
