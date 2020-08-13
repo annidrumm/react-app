@@ -1,16 +1,16 @@
 import React from 'react'
-import './TodoForm.css'
 import { v4 as uuidv4 } from 'uuid'
+import styled from 'styled-components/macro'
 
 export default function TodoForm({ onCreateTodo }) {
   return (
-    <form onSubmit={handleSubmit} className="TodoForm">
+    <Form onSubmit={handleSubmit}>
       <label htmlFor="todo-input">Add Your Dos</label>
       <div>
         <input id="todo-input" name="todo" />
-        <button className="Button">Add</button>
+        <Button>Add</Button>
       </div>
-    </form>
+    </Form>
   )
   function handleSubmit(event) {
     event.preventDefault()
@@ -21,3 +21,20 @@ export default function TodoForm({ onCreateTodo }) {
     input.focus()
   }
 }
+
+const Form = styled.form`
+  display: grid;
+`
+
+const Button = styled.button`
+  background-color: skyblue;
+  box-shadow: 2px 10px 16px rgba(135, 206, 235);
+  border-radius: 50px;
+  overflow: hidden;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 15px 30px;
+  margin: 15px 30px;
+`
